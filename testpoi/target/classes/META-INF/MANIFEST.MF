@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: testpoi
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: Administrator
+Built-By: CGB
 Implementation-Vendor-Id: com.poi
-Build-Jdk: 1.8.0_181
+Build-Jdk: 1.8.0_171
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
  ot-starter-parent/testpoi
 Created-By: Maven Integration for Eclipse

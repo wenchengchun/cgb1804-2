@@ -12,7 +12,7 @@
     http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
     <!-- 开启包扫描 -->
-     <context:component-scan base-package="com.jt"></context:component-scan>
+     <context:component-scan base-package="com.cgb"></context:component-scan>
     
     <!-- 高级版导配置文件方法 -->
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">

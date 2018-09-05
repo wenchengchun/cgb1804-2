@@ -34,11 +34,11 @@
         <property name="maxUploadSize"  value="10485760" ></property>
     </bean>
     <!-- 定义拦截器 -->
-    <mvc:interceptors>
+  <!--   <mvc:interceptors>
         <mvc:interceptor>
             <mvc:mapping path="/cart/**"/>
             <mvc:mapping path="/order/**"/>
             <bean class="com.jt.web.intercept.UserInterceptor"></bean>
         </mvc:interceptor>
-    </mvc:interceptors>
+    </mvc:interceptors> -->
 </beans>
