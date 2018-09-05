@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.poi.testpoi.mapper.HousesrcMapper">
+
+	<resultMap id="BaseResultMap" type="com.poi.testpoi.pojo.Housesrc">
+		<id column="id" property="id" jdbcType="INTEGER" />
+		<result column="title" property="title" jdbcType="VARCHAR" />
+		<result column="price" property="price" jdbcType="VARCHAR" />
+		<result column="are" property="are" jdbcType="VARCHAR" />
+		<result column="modle" property="modle" jdbcType="VARCHAR" />
+		<result column="hight" property="hight" jdbcType="VARCHAR" />
+		<result column="bear" property="bear" jdbcType="VARCHAR" />
+		<result column="sub" property="sub" jdbcType="VARCHAR" />
+		<result column="str" property="str" jdbcType="VARCHAR" />
+		<result column="loc" property="loc" jdbcType="VARCHAR" />
+		<result column="tim" property="tim" jdbcType="VARCHAR" />
+		<result column="url" property="url" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<sql id="column_List">
+		id,title,price,are,modle,hight,bear,sub,str,loc,tim,url
+	</sql>
+
+	<select id="selectHousesrcs" resultMap="BaseResultMap">
+		SELECT
+		<include refid="column_List" />
+		FROM housesrc
+	</select>
+
+	<update id="updateHousesrcByName" parameterType="com.poi.testpoi.pojo.Housesrc">
+		update housesrc set price=#{price} where title = #{title}
+	</update>
+
+	<insert id="addHousesrc" parameterType="com.poi.testpoi.pojo.Housesrc">
+		INSERT INTO USER (title,price,are,modle,hight,bear,sub,str,loc,tim,url) VALUES (#{title},#{price},#{are},#{modle},#{hight},#{bear},#{sub},#{str},#{loc},#{tim},#{url})
+	</insert>
+
+	<select id="selectByTitle" resultType="String">
+		SELECT count(*) FROM housesrc WHERE title=#{title}
+	</select>
+
+
+</mapper>
